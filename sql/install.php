@@ -25,7 +25,7 @@
 */
 $sql = array();
 
-$sql[] = "ALTER TABLE " . _DB_PREFIX_ . "product ADD is_large BOOLEAN";
+$sql[] = 'ALTER TABLE `' . _DB_PREFIX_ . 'product` ADD `is_large` BOOLEAN NOT NULL DEFAULT FALSE';
 
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {

@@ -31,7 +31,7 @@
  */
 $sql = array();
 
-$sql[] = "ALTER TABLE " . _DB_PREFIX_ . "product DROP is_large";
+$sql[] = 'ALTER TABLE `' . _DB_PREFIX_ . 'product` DROP `is_large`;';
 
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {
