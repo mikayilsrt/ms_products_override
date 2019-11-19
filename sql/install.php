@@ -25,10 +25,7 @@
 */
 $sql = array();
 
-$sql[] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'ms_products` (
-    `id_ms_products` int(11) NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY  (`id_ms_products`)
-) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8;';
+$sql[] = "ALTER TABLE " . _DB_PREFIX_ . "product ADD is_large BOOLEAN";
 
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {
